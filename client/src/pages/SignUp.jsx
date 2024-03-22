@@ -3,7 +3,7 @@ import {useState} from 'react';
 import { Link ,useNavigate } from 'react-router-dom';
 
 
-export default function NewSignUp() {
+export default function SignUp() {
   const [formData, setFormData] = useState({});
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -39,7 +39,7 @@ export default function NewSignUp() {
       
       setLoading(false);
       setError(null);
-      navigate('/newsignin');
+      navigate('/sign-in');
     } catch (error) {
       setLoading(false);
       setError(error.message);
@@ -68,7 +68,7 @@ export default function NewSignUp() {
         <p>
           Have an account?
         </p>
-        <Link to={"./pages/NewSignIn"}>
+        <Link to={"/sign-in"}>
           <span className='text-blue-700'>Sign in</span>
         </Link>
       </div>
